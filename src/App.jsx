@@ -1,4 +1,5 @@
 import "./App.css";
+import { BsOctagonHalf } from "react-icons/bs";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <button className="btn btn-accent">Button</button>
       <button className="btn btn-ghost">Button</button>
       <button className="btn btn-link">Button</button>
+      <BsOctagonHalf />
     </div>
   );
 }
