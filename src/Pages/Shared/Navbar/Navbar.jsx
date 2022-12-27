@@ -5,16 +5,16 @@ const Navbar = () => {
   const menuItems = (
     <>
       <li>
-        <Link>Media</Link>
+        <Link to="/media">Media</Link>
       </li>
       <li>
-        <Link>Message</Link>
+        <Link to="/messages">Messages</Link>
       </li>
       <li>
-        <Link>About</Link>
+        <Link to="/about">About</Link>
       </li>
       <li className="visible md:invisible">
-        <Link>Login</Link>
+        <Link to="/login">Login</Link>
       </li>
     </>
   );
@@ -46,7 +46,7 @@ const Navbar = () => {
               {menuItems}
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">
+          <Link to="/" className="btn btn-ghost normal-case text-xl">
             Social Media Web
           </Link>
         </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="navbar-end invisible md:visible">
           <ul>
             <li className="btn btn-ghost">
-              <Link>Login</Link>
+              <Link to="/login">Login</Link>
             </li>
           </ul>
         </div>
