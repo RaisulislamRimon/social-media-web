@@ -9,16 +9,16 @@ const WritePost = () => {
     setSpinning(true);
     e.preventDefault();
     const form = e.target;
-    const post = form.post.value;
+    const postDesc = form.postDesc.value;
     const image = form.image.files[0];
 
     const formData = new FormData();
     formData.append("image", image);
     // console.log(formData);
 
-    if (post.length === 0) return toast.error("Please write something");
+    if (postDesc.length === 0) return toast.error("Please write something");
 
-    console.log(post, image);
+    console.log(postDesc, image);
 
     const imgbbUrl = `https://api.imgbb.com/1/upload?key=${
       import.meta.env.VITE_imgbb_apiKey
@@ -34,9 +34,9 @@ const WritePost = () => {
       .then((data) => {
         // console.log(data?.status_code);
         if (data?.success) {
-          console.log(data.data.display_url);
+          console.log(data?.data?.display_url);
           // return data.data.display_url;
-          const image = data.data.display_url;
+          const image = data?.data?.display_url;
 
           // // create user
           // createUser(email, password)
@@ -89,8 +89,8 @@ const WritePost = () => {
         <form onSubmit={handleSubmit} className="form-control relative">
           <textarea
             className="textarea textarea-bordered h-24"
-            placeholder="write your post..."
-            name="post"
+            placeholder="write your post description..."
+            name="postDesc"
             required
           ></textarea>
           <input
