@@ -1,9 +1,10 @@
 import React from "react";
+import WritePost from "../WritePost/WritePost";
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <WritePost />
     </div>
   );
 };
